@@ -1,0 +1,24 @@
+/*To get All signals*/
+curl http://localhost:8088/reports/AllSignals 
+
+/*To get Signals on basis of severity*/
+curl -is http://localhost:8088/reports/severity/<<Severity>>
+ex:
+curl -is http://localhost:8088/reports/severity/1
+
+/*To get Signals which are cleared*/
+
+curl -is http://localhost:8088/reports/cleared/1
+
+/*To get Signals which are not cleared*/
+
+curl -is http://localhost:8088/reports/cleared/0
+
+/*To get Signals on basis of timestamp*/
+curl http://localhost:8088/reports/date/dd-mm-yyyy<<11-07-2013>>
+
+/*To get Signals between  timestamps*/
+curl http://localhost:8088/reports/date/dd-mm-yyyy<<11-07-2013>>/dd-mm-yyyy<<11-07-2014>>
+
+
+
